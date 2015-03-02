@@ -1,5 +1,4 @@
-myName = input("What is your name?")
-var1 = 1
-var2 = 10
-print(str(var1) + " & " + str(var2))
-print "s" in myName
+x = raw_input('What is your name? ')
+y = raw_input('How old are you? ')
+print 'Your name is ' + x + ' and you are ' + y + ' years old'
+
