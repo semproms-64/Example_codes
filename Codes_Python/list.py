@@ -11,3 +11,5 @@ del l1[1] #Deleting the 1 element of l1
 print l1 #We print l1
 l1.append(512) #We add an element
 print l1 #Printing l1
+del l1[:] #Empty 
+print l1 #Printing l1
