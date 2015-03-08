@@ -8,7 +8,7 @@ def worker_2():
 	print 'Probando_worker_2'
 	return
 
-threads = list()
+threads = list() #A list of threads
 
 for i in range(3):
 	t = threading.Thread(target=worker)
