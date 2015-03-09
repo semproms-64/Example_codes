@@ -1,1 +1,0 @@
-Links de interés: http://pharalax.com/blog/python-desarrollo-de-interfaces-graficas-con-tkinter-labelsbuttonsentrys/ AND https://docs.python.org/2/howto/sockets.html
