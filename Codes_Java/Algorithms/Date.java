@@ -10,4 +10,24 @@ public class Date
 		this.day = day;
 		this.year = year;
 	}
+
+	public int month()
+	{
+		return month;
+	}
+
+	public int year()
+	{
+		return year;
+	}
+
+	public int day()
+	{
+		return day;
+	}
+
+	public String toString()
+	{
+		return month+"/"+day+"/"+year;
+	}
 }
