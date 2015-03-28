@@ -1,3 +1,12 @@
+/*************************************************************************
+ *  Compilation:  gcc loop_0.c -o loop_0
+ *  Execution:    ./loop_0
+ *
+ *  With the command time ./loop_0
+ *  Author: Semproms
+ *************************************************************************/
+
+
 #include <stdio.h>
 #define N 30000
 
