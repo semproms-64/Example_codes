@@ -1,31 +1,15 @@
+/*************************************************************************
+ *  Compilation:  gcc quicksort.c -o quicksort
+ *
+ *  Author: Semproms
+ *
+ *************************************************************************/
+
 #include <stdio.h>
+#include <stdlib.h>
 
 void quicksort(int[], int, int);
 int partition(int[], int, int);
-
-void main()
-{
-	int a[] = {7, 12, 1, -2, 0, 15, 4, 11, 9};
-
-	int i;
-	int size = (sizeof(a))/(sizeof(int));
-	printf("Unsorted array is: \n");
-	for (i = 0; i < size; i++)
-	{
-		printf("%d ", a[i]);
-	}
-
-	quicksort(a, 0, 8);
-
-	printf("\n");
-
-	printf("Sorted array is: \n");
-	for (i = 0; i < size; i++)
-	{
-		printf("%d ", a[i]);
-	}
-	printf("\n");
-}
 
 void quicksort(int a[], int l, int r)
 {
@@ -60,3 +44,41 @@ int partition(int a[], int l, int r)
 	a[j] = t;
 	return j;
 }
+
+int main(int argc, char const *argv[])
+{
+	if (argc < 3)
+	{
+		printf("Wrong number of arguments!\n");
+		exit(-1);
+	}
+	int muestra = argc-1;
+	int array[muestra];
+	int size = (sizeof(array))/(sizeof(int));
+
+	int z;
+	for (z = 0; z < muestra; z++)
+	{
+		array[z] = atoi(argv[z+1]);
+	}
+
+	int i;
+	printf("Unsorted array is: \n");
+	for (i = 0; i < muestra; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	
+	quicksort(array, 0, argc-2);
+	
+	printf("\n");
+
+	printf("Sorted array is: \n");
+	for (i = 0; i < muestra; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	printf("\n");
+	return 0;
+}
+
