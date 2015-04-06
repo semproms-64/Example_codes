@@ -1,3 +1,5 @@
+import java.util.*;
+
 class QueueClient
 {
 	public static int[] readInts(String name)
@@ -23,6 +25,9 @@ class QueueClient
 
 	public static void main(String[] args) 
 	{
-		readInts("/home/semproms/hola.txt");
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("I need a path with a txt file: ");
+		String path = keyboard.next();
+		readInts(path);
 	}
 }
