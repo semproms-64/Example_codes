@@ -1,10 +1,24 @@
+import java.util.Random;
+
 class selector
 {
 	public static void main(String[] args) 
 	{
-		for (int var = 0; var < args.length; var++) 
+		Random rand = new Random();
+		for (int var = 5; var > 0; var--) 
 		{
-			System.out.println(args[var]);
+			try
+			{
+				System.out.println("Wait "+var);
+				Thread.sleep(1000);	
+			}
+			catch(Exception e) 
+			{
+				System.err.println("Something went wrong!");
+			}	
 		}
+
+		System.out.println("Soution: "+args[rand.nextInt((args.length-1)) + 1]);
+
 	}
 }
