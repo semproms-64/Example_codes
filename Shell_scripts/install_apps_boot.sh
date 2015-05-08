@@ -4,7 +4,7 @@
 if [[ $UID != 0 ]]; 
 	then
 		echo "You are not sudo"
-		echo exec sudo $0
+		exec sudo $0
 fi
 	
 apt-get -y install vlc
