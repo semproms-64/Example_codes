@@ -1,3 +1,9 @@
+/* Author: Semproms 
+ * Date: Wed Jul 15 21:34:04 CEST 2015
+ * Problem: 3n+1 problem
+ */ 
+
+
 #include <stdio.h>
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
