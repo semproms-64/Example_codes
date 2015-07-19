@@ -1,6 +1,7 @@
 /*
  * Author: Semproms
  * Date: Sun Jul 19 17:45:19 CEST 2015
+ * Accepted: Yes
 */
 
 #include <stdio.h>
