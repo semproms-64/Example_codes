@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <unistd.h> 
+#include <string.h>
 
 char display[1000][1000];
 int n_lines, n_cols;
@@ -6,6 +8,7 @@ int n_lines, n_cols;
 void setSizeLCD(int size) {
 	n_lines = 2*size+3;
 	n_cols = size + 2;
+	display[n_lines][n_cols];
 }
 
 void drawZero(int size, int position) {
@@ -155,28 +158,22 @@ void drawNine(int size, int position) {
     }
 }
 
-void clearDisplay(int f) {
-	int i, j;
-
-	for (i = 1; i <= n_lines; i++) {
-		for (j = 1; j <= f; j++) {
-			display[i][j] = ' ';
-		}
-	}
+void clearDisplay() {
+	memset(&display, ' ', sizeof(display));
 }
 
 int main(int argc, char const *argv[]) {
 	
 	int size, i, j, f;
-	char num[10]; 
+	char num[50]; 
 	while(scanf("%d %s", &size, num) != EOF) {
 		
-
+		printf("\n");
 		if(size == 0 && atoi(num) == 0) break;
 		setSizeLCD(size);
 		int length = sizeof(num)/sizeof(num[0]);
 		f=(length*n_cols)+length-1;
-		clearDisplay(f); 
+		clearDisplay(); 
 
 		for (i = 0; i < length; i++) {
 			if(num[i]-'0'==0) drawZero(size,i+1);
@@ -196,7 +193,9 @@ int main(int argc, char const *argv[]) {
             	printf("%c",display[i][j]);
             printf("\n");
         	}
+        memset(&num, ' ', sizeof(num));
 		}
 		printf("\n");
+
 	return 0;
 }
