@@ -51,6 +51,10 @@ class wertyu {
 		container.put('0','9');
 		container.put('-','0');
 		container.put('=','-');
+		container.put('\\',']');
+		container.put(']','[');
+		container.put('[','P');
+		container.put(';','L');
 
 
 		String input = teclado.nextLine();
