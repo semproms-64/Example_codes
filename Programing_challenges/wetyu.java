@@ -1,8 +1,8 @@
 /*
  * Author: Semproms
- * Date: 
+ * Date: Sun Jul 19 23:10:43 CEST 2015
  * ID: 10082
- * Accepted: ¿?
+ * Accepted: Not yet.
 */
 
 import java.util.*;
