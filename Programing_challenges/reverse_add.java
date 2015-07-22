@@ -2,7 +2,7 @@
  * Author: Semproms
  * Date:
  * ID: 10018
- * Accepted: Not yet.
+ * Accepted: Yes
 */
 
 import java.util.*;
