@@ -1,6 +1,6 @@
 /*
  * Author: Semproms
- * Date:
+ * Date: Wed Jul 22 12:20:31 CEST 2015
  * ID: 10018
  * Accepted: Yes
 */
@@ -25,19 +25,10 @@ class reverse_add {
 	private static boolean is_palindrome(long num) {
 		long n = num;
 		long rev = 0;
-		long dig = 0;
 
-		while(num > 0) {
-			dig = num % 10;
-			rev = rev * 10 + dig;
-			num = num/10;
-		}
+		rev = get_reverse(n);
 
-		if (n == rev) {
-			return true;
-		}
-		else
-			return false;
+		return n==rev;
 	}
 
 	public static void main(String[] args) throws Exception {
