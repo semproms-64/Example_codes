@@ -22,10 +22,6 @@ class reverse_add {
 		return result;
 	}
 
-	private static boolean is_palindrome(long num) {
-		return num==get_reverse(n);
-	}
-
 	public static void main(String[] args) throws Exception {
 		String cad;
 		int n;
@@ -48,7 +44,7 @@ class reverse_add {
 				reverse = get_reverse(num);
 				num = num + reverse;
 				cycles++;
-				if (is_palindrome(num)) {
+				if (num==get_reverse(num)) {
 					finish = true;
 				}
 			}
