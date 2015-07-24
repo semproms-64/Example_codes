@@ -23,12 +23,7 @@ class reverse_add {
 	}
 
 	private static boolean is_palindrome(long num) {
-		long n = num;
-		long rev = 0;
-
-		rev = get_reverse(n);
-
-		return n==rev;
+		return num==get_reverse(n);
 	}
 
 	public static void main(String[] args) throws Exception {
