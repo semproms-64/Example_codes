@@ -17,7 +17,6 @@ class primary_arithmetic {
 		long carry = 0;
 		long n_1 = 0;
 		long n_2 = 0;
-		long temp = 0;
 		long carr = 0;
 
 		while(num1!=0 || num2!=0) {
