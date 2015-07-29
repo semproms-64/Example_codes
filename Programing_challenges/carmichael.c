@@ -2,7 +2,7 @@
  * Author: Semproms
  * Date: Wed Jul 29 09:21:20 CEST 2015
  * Uva ID: 10006
- * Accepted: No and I don't know why.
+ * Accepted: Yes.
 */
 
 
@@ -75,14 +75,14 @@ int is_Carmichael(int n) {
 int main(int argc, char const *argv[]) {
 	
 	int n;
-	while((scanf("%d",&n))==1) {
+	while(scanf("%d",&n)==1) {
 		if(n == 0)
 			break;
 		if(is_Carmichael(n)) {
 			printf("The number %d is a Carmichael number.\n", n);
 		}
 		else
-			printf("The number %d is normal.\n", n);
+			printf("%d is normal.\n", n);
 	}
 	return 0;
 }
