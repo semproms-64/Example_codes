@@ -1,6 +1,7 @@
 /*
  * Author: Semproms
- * Accepted: Not yet.
+ * Date: Wed Jul 29 15:43:23 CEST 2015
+ * Accepted: Yes
  * ID: 10035
 */
 
@@ -17,18 +18,17 @@ class primary_arithmetic {
 		long n_1 = 0;
 		long n_2 = 0;
 		long temp = 0;
-		boolean carr = false;
+		long carr = 0;
 
 		while(num1!=0 || num2!=0) {
 			n_1 = num1%10;
 			n_2 = num2%10;
-			temp = (carr)?1:0;
-			if(temp+n_1+n_2>=10) {
+			if(carr+n_1+n_2>=10) {
 				carry++;
-				carr = true;
+				carr = 1;
 			}
 			else
-				carr = false;
+				carr = 0;
 			num1 = num1/10;
 			num2 = num2/10;
 		}
@@ -51,8 +51,11 @@ class primary_arithmetic {
 			if(carry==0) {
 				System.out.println("No carry operation.");
 			}
+			else if(carry==1) {
+				System.out.println("1 carry operation.");
+			}
 			else
-				System.out.printf("%d carry operation.\n", carry);
+				System.out.printf("%d carry operations.\n", carry);
 		}
 	}
 }
